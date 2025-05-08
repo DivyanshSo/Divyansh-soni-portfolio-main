@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyansh S - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(11, 1, 18);
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+            padding: 0 20px;
+            background-color: rgb(137, 15, 231);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            color: rgb(147, 147, 207);
+            font-size: 1.1rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px;
+            flex-wrap: wrap;
+        }
+
+        .firstsection .leftsection {
+            width: 45%;
+            background-color: rgb(137, 15, 231);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .firstsection .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: purple;
+            color: white;
+            border: 2px solid purple;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: purple;
+        }
+
+        .firstsection .rightsection img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .secondsection {
+            max-width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .secondsection h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .secondsection .box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .secondsection .vertical {
+            background-color: white;
+            color: black;
+            border-radius: 8px;
+            padding: 20px;
+            width: 45%;
+            text-align: left;
+        }
+
+        .footer {
+            background-color: rgb(61, 61, 140);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .footer ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .footer ul li {
+            color: lightgray;
+            cursor: pointer;
+        }
+
+        .footer ul li:hover {
+            color: white;
+        }
+
+        .footer-rights {
+            margin-top: 10px;
+            color: gray;
+        }
+
+        .text-grey {
+            color: grey;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .intro-text {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeSlideUp 1.5s ease-out forwards;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .typewriter-text {
+            font-size: 1.5rem;
+            color: rgb(31, 12, 77);
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid rgba(164, 187, 14, 0.75);
+            width: fit-content;
+            animation: typing 4s steps(45, end), blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes fadeSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .firstsection .leftsection,
+            .firstsection .rightsection {
+                width: 100%;
+            }
+
+            .secondsection .vertical {
+                width: 100%;
+            }
+        }
+
+        .languages-box {
+            position: relative;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .language-icons {
+            margin-top: 10px;
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .languages-box:hover .language-icons {
+            opacity: 1;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #2e6988;
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.3s ease;
+        }
+
+        .languages-box:hover .icon {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .webdev-box {
+    position: relative;
+    animation: fadeIn 1.5s ease-in;
+    margin-top: 40px;
+}
+
+.language-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.webdev-box:hover .language-icons {
+    opacity: 1;
+}
+
+.language-item {
+    text-align: center;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #811010;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.language-description {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ba1313;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.webdev-box:hover .icon {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.webdev-box {
+    position: relative;
+    animation: fadeIn 1.5s ease-in;
+    margin-top: 40px;
+}
+
+.language-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    opacity: 1; /* Make the icons visible by default */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.language-item {
+    text-align: center;
+    background-color: #1a1a1a; /* Subtle background for the icon */
+    border-radius: 10px;
+    padding: 20px;
+    width: 120px; /* Control the size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add some shadow for better definition */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.language-item:hover {
+    background-color: #4e4e4e; /* Darker shade on hover */
+    transform: translateY(-5px); /* Subtle movement effect */
+}
+
+.icon {
+    font-size: 2rem;
+    color: #fff; /* White icons */
+    margin-bottom: 10px; /* Space between icon and text */
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.language-description {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ccc;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1; /* Keep description visible by default */
+}
+
+.webdev-box:hover .icon {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Divyansh Soni</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                <h2 class="typewriter-text">
+                    <span class="typed-text">Hi, I am Divyansh Soni and an aspiring web developer.</span>
+                </h2>
+                <div class="buttons">
+                    <a href="resume.pdf" download>
+                        <button class="btn">Download Resume</button>
+                    </a>
+                    <a href="https://github.com/DivyanshSo" target="_blank">
+                        <button class="btn">Visit GitHub</button>
+                    </a>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="3426526.jpg" alt="Profile Image">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="text-grey">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical languages-box">
+                    <h3>Programming Languages</h3>
+                    <div class="language-icons">
+                        <div class="language-item">
+                            <i class="fa-solid fa-c icon" title="C Language"></i>
+                            <p class="language-description">C is a powerful general-purpose programming language used for system programming.</p>
+                        </div>
+                        <div class="language-item">
+                            <i class="fa-solid fa-code icon" title="C++"></i>
+                            <p class="language-description">C++ is an object-oriented language, an extension of C with classes and objects.</p>
+                        </div>
+                        <div class="language-item">
+                            <i class="fa-brands fa-python icon" title="Python"></i>
+                            <p class="language-description">Python is a versatile and easy-to-learn language used for web development, AI, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical webdev-box">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                    <div class="language-icons">
+                        <div class="language-item">
+                            <i class="fa-brands fa-html5 icon" title="HTML"></i>
+                            <p class="language-description">HTML is the standard language for creating web pages and web applications.</p>
+                        </div>
+                        <div class="language-item">
+                            <i class="fa-brands fa-css3 icon" title="CSS"></i>
+                            <p class="language-description">CSS is used to style and lay out web pages, controlling layout and appearance.</p>
+                        </div>
+                        <div class="language-item">
+                            <i class="fa-brands fa-js icon" title="JavaScript"></i>
+                            <p class="language-description">JavaScript is a programming language used to create dynamic, interactive effects within web browsers.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <h3>Divyansh's Developer Portfolio</h3>
+            <ul>
+                <li>Home</li>
+                <li>Projects</li>
+                <li>Certifications</li>
+                <li>Contact</li>
+            </ul>
+            <div class="footer-rights">
+                www.DivyanshPortfolio.com || All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
