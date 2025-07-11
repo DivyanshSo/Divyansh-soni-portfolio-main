@@ -4,245 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divyansh S - Web Developer</title>
+  <link rel="stylesheet" href="indexstyle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="style.css" href="indexstyle.css">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: rgb(11, 1, 18);
-      color: white;
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: rgb(137, 15, 231);
-      flex-wrap: wrap;
-    }
-
-    nav .left {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    nav ul li a:hover {
-      color: rgb(147, 147, 207);
-    }
-
-    .firstsection {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 40px 20px;
-      flex-wrap: wrap;
-    }
-
-    .leftsection {
-      flex: 1 1 400px;
-      background-color: rgb(137, 15, 231);
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      margin-top: 20px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      background-color: purple;
-      color: white;
-      border: 2px solid purple;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: white;
-      color: purple;
-    }
-
-    .rightsection {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-
-    .rightsection img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .secondsection {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .secondsection h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .box {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .vertical {
-      background-color: white;
-      color: black;
-      border-radius: 8px;
-      padding: 20px;
-      flex: 1 1 300px;
-      min-width: 280px;
-    }
-
-    .language-icons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-      justify-content: center;
-    }
-
-    .language-item {
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      padding: 20px;
-      width: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .language-item:hover {
-      background-color: #4e4e4e;
-      transform: translateY(-5px);
-    }
-
-    .icon {
-      font-size: 2rem;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    .language-description {
-      color: #ccc;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    footer {
-      background-color: rgb(61, 61, 140);
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    footer ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      padding: 10px 0;
-      flex-wrap: wrap;
-    }
-
-    footer ul li {
-      color: lightgray;
-      cursor: pointer;
-    }
-
-    footer ul li:hover {
-      color: white;
-    }
-
-    .footer-rights {
-      margin-top: 10px;
-      color: gray;
-    }
-
-    .text-grey {
-      color: grey;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .typewriter-text {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #fff;
-      border-left: 3px solid #ba1313;
-      padding-left: 10px;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0% {
-        border-color: #ba1313;
-      }
-      50% {
-        border-color: transparent;
-      }
-      100% {
-        border-color: #ba1313;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .box {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .buttons {
-        justify-content: center;
-      }
-
-      .typewriter-text {
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -320,6 +84,29 @@
         </div>
       </div>
     </section>
+    <section class="secondsection">
+  <span class="text-grey">Fun Python Console Project</span>
+  <h1>Console Game Showcase</h1>
+  <div class="box">
+    <div class="vertical">
+      <h3>Python Console Game</h3>
+      <p>This is a terminal-based Python game I created using core logic and basic I/O handling. It showcases my understanding of programming fundamentals and Python scripting.</p>
+      
+      <!-- If you have a screenshot or GIF -->
+      <img src="http://static1.businessinsider.com/image/55ae658d6bb3f7e3321bf8a4/two-casino-dealers-and-two-of-their-friends-have-been-indicted-for-stealing-1-million-from-las-vegas-casino.jpg" alt="Game Demo" width="100%" style="border-radius: 8px; margin: 15px 0;" />
+
+      <!-- GitHub Button -->
+      <a href="https://github.com/DivyanshSo/Casinogame_Python" target="_blank">
+        <button class="btn">View Code on GitHub</button>
+      </a>
+      <!-- Optional: Download -->
+      <a href="downloads/console-game.py" download>
+        <button class="btn">Download Game</button>
+      </a>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <footer>
